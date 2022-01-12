@@ -31,7 +31,7 @@ class WandbLogger:
                                                          'psnr',
                                                          'ssim'])
 
-    def log_metrics(self, metrics, commit=True):
+    def log_metrics(self, metrics, commit=True): 
         """
         metrics: dictionary of metrics to be logged
         """
@@ -72,5 +72,3 @@ class WandbLogger:
 
     def log_eval_table(self, commit=False):
         self._wandb.log({'eval_data': self.eval_table}, commit=commit)
-
-
